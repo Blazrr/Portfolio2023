@@ -8,7 +8,6 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
     <Navbar/>
-    <Intro/>
     <Blob/>
   <Component {...pageProps} />
   </>

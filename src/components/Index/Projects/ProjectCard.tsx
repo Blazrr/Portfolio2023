@@ -8,7 +8,6 @@ type Props = {
 }
 
 const ProjectCard = ({project, setHoveredDiv}: Props) => {
-  console.log(project)
   return (
     <div  onMouseEnter={() => setHoveredDiv(true,project)} onMouseLeave={() => setHoveredDiv(false,project)} className='h-[500px] w-[500px] bg-slate-300' >{project?.project}</div>
   )

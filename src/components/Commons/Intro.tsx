@@ -1,14 +1,15 @@
 import React from 'react'
-import {motion} from "framer-motion"
+import {AnimatePresence, motion} from "framer-motion"
 import GlitchedText from './GlitchedText'
 type Props = {}
 
 const Intro = (props: Props) => {
   return (
-    <motion.div className='text-white h-screen w-screen absolute top-0 left-0 bg-black flex items-center justify-center'
-    initial={{opacity:1, y:0}}
-    animate={{ y:"-100%"}}
-    transition={{ delay: 3,ease: "easeOut",duration: .3 }}
+    <motion.div className='text-white h-full w-full absolute top-0 left-0 bg-black flex items-center justify-center'
+    initial={{opacity:0, y:0}}
+    animate={{opacity:1, y:0}}
+    exit={{y:"-100%"}}
+    transition={{ ease: "easeOut",duration: .5 }}
     >
        <motion.div
        initial={{opacity:0}}
@@ -19,6 +20,7 @@ const Intro = (props: Props) => {
         </div>
         </motion.div> 
     </motion.div>
+
   )
 }
 
