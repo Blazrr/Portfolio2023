@@ -6,9 +6,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 
 export default function Home() {
-  const [isShown, setIsShown] = useState<boolean>(true);
 
-  setTimeout(() => setIsShown(false), 2800);
 
   return (
     <div>
@@ -18,13 +16,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <AnimatePresence>{isShown && <Intro />}</AnimatePresence>
-      {!isShown && (
-        <>
+
+
           <Header />
           <Projects />
-        </>
-      )}
+
+
     </div>
   );
 }
