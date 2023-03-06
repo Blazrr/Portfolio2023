@@ -1,3 +1,63 @@
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    @apply bg-black text-white w-4/5 mx-auto
+} 
+
+@layer base {
+    html .glitched {
+      font-family: "Space Mono";
+    }
+  }
+
+  @layer components {
+
+    @keyframes rotate {
+      from {
+        rotate: 0deg;
+      }
+    
+      50% {
+        scale: 1 1.5;
+      }
+    
+      to {
+        rotate: 360deg;
+      }
+    }
+    #blob {
+      background-color: white;
+      height: 24vmax;
+      aspect-ratio: 1;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      translate: -50% -50%;
+      border-radius: 50%;
+      background: linear-gradient(to right, rgb(0, 132, 255), rgb(162, 27, 167));
+      animation: rotate 20s infinite;
+      opacity: 0.8;
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+      z-index: -3;
+    }
+ 
+    #blur {
+      height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      position: fixed;
+      z-index: -2;
+      backdrop-filter: blur(12vmax);
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+    }
+}
