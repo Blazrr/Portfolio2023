@@ -6,7 +6,7 @@ import { AnimatePresence } from 'framer-motion'
 import type { AppProps } from 'next/app'
 import {useEffect, useState} from "react"
 export default function App({ Component, pageProps }: AppProps) {
-  const [isShown, setIsShown] = useState<boolean>(true);
+  const [isShown, setIsShown] = useState<boolean>(false);
   useEffect(() => {
     setTimeout(() => setIsShown(false), 2800);
   },[])
