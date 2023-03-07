@@ -21,16 +21,13 @@ const Projects = (props: Props) => {
   };
   return (
     <>
-      <div className="flex justify-between mt-32">
-        <div className="flex-wrap flex space-x-8">
-
-        {
-            projects.map((project, id) => {
-                return (
-                    <ProjectCard key={id} setHoveredDiv={showDiv} project={project} />
-                )
-            })
-        }
+      <div className="flex mt-32">
+        <div className="flex-wrap flex gap-8 items-center justify-around">
+          {projects.map((project, id) => {
+            return (
+              <ProjectCard key={id} setHoveredDiv={showDiv} project={project} />
+            );
+          })}
         </div>
       </div>
       {isHovered && <HoveredCard project={currHovered} />}

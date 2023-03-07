@@ -3,11 +3,9 @@ import Header from "@/components/Index/Header";
 import Projects from "@/components/Index/Projects/Projects";
 import Intro from "@/components/Commons/Intro";
 import { useEffect, useState } from "react";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Home() {
-
-
   return (
     <div>
       <Head>
@@ -17,11 +15,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-
-          <Header />
-          <Projects />
-
-
+      <Header />
+      <Projects />
     </div>
   );
 }
