@@ -52,8 +52,8 @@ const tailwind = {
         "Started this project to learn more about Backend with supabase, This project is still in Build but can be shown if requested",
       img: "/Netflim.png",
       techno: [React, Redux, ReactRouter, Supabase],
-      source: "https://netflims.vercel.app/",
-      link: "https://github.com/Blazrr/Netflims",
+      source: "https://github.com/Blazrr/Netflims",
+      link: "https://netflims.vercel.app/",
     },
     {
       project: "Audiophile",
