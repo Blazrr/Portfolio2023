@@ -4,7 +4,7 @@ type Props = {};
 
 const Contact = (props: Props) => {
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} onClick={()=> alert("test")}>
       Contact
     </motion.div>
   );

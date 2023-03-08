@@ -4,6 +4,7 @@ import useMousePosition from "@/hooks/useMousePosition";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/reducers/store";
 import { changeCursor } from "@/reducers/cursorSlice";
+import {BiCross} from "react-icons/bi"
 
 function Cursor() {
   const cursor = useSelector((state: RootState) => state.cursor.value);
@@ -14,11 +15,11 @@ function Cursor() {
       y: y - 16,
     },
     text: {
-      height: 150,
-      width: 150,
-      x: x - 75,
-      y: y - 75,
-      backgroundColor: "blue",
+      height: 100,
+      width: 100,
+      x: x - 50,
+      y: y - 50,
+      backgroundColor: "purple",
       mixBlendMode: "difference",
     },
   };
@@ -30,12 +31,18 @@ function Cursor() {
   // onMouseLeave={textLeave}
 
   return (
+    <>
     <motion.div
-      className="cursor"
-      // @ts-ignore
+      className="cursor "
+       // @ts-ignore
       variants={variants}
       animate={cursor}
-    />
+      />
+      <div  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 transform !pointer-events-none  " style={{top:`${y}px`, left:`${x}px`}}>
+        <BiCross/>
+      </div>
+     
+      </>
   );
 }
 
