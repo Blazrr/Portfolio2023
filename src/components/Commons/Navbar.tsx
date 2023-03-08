@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { Squash } from "hamburger-react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useDispatch } from "react-redux";
+import { changeCursor } from "@/reducers/cursorSlice";
 
 type Props = {};
 
@@ -16,21 +18,40 @@ const Navbar = (props: Props) => {
       opacity:1,
       transition: { staggerChildren: 0.1, ease: "easeInOut", duration: .5 },
     },
+    exit:{
+      x: "-4rem", opacity:0,
+      transition: { staggerChildren: 0.1, ease: "easeInOut", duration: .5 },
+    }
   };
 
+  const dispatch = useDispatch()
+
+
+  const enter = () => {
+    setOpen(true)
+    dispatch(changeCursor("text"))
+  }
+  const leave = () => {
+    setOpen(false)
+    dispatch(changeCursor("default"))
+  }
+
   return (
+    <>
     <nav
-      onMouseOver={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
-      className="absolute flex items-center justify-center top-12 right-24"
+      onMouseOver={enter}
+      onMouseLeave={leave}
+      className="absolute flex items-center justify-center top-12 right-24 "
+
     >
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="absolute right-24 p-24 flex space-x-4 md:space-x-6 lg:space-x-8 text-2xl font-semibold"
+            className="absolute right-24 p-24 flex space-x-4 md:space-x-6 lg:space-x-8 z-50 text-2xl font-semibold"
             variants={boxVariants}
             initial="initial"
             animate="animate"
+            exit="exit"
           >
             <motion.div variants={boxVariants} >
               <Link
@@ -67,10 +88,12 @@ const Navbar = (props: Props) => {
           </motion.div>
         )}
       </AnimatePresence>
-      <div className="p-12">
-        <Squash toggled={isOpen} />
+      <div className="p-12 ">
+        <Squash toggled={isOpen}  />
       </div>
+      
     </nav>
+    </>
   );
 };
 
