@@ -4,10 +4,11 @@ import HoveredCard from "./HoveredCard";
 import useMousePosition from "@/hooks/useMousePosition";
 import { projects } from "@/Data/Projects";
 import { project } from "@/utils/typings";
+import { Parallax } from "@react-spring/parallax";
 
 type Props = {};
 
-const Projects = (props: Props) => {
+const AllProjects = (props: Props) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
   const [currHovered, setCurrHovered] = useState<project>();
@@ -22,7 +23,7 @@ const Projects = (props: Props) => {
   return (
     <>
       <div className="flex mt-32">
-        <div className="flex-wrap flex gap-8 items-center justify-around">
+        <div className=" flex gap-8 items-center mx-auto flex-col justify-center " >
           {projects.map((project, id) => {
             return (
               <ProjectCard key={id} setHoveredDiv={showDiv} project={project} />
@@ -35,4 +36,4 @@ const Projects = (props: Props) => {
   );
 };
 
-export default Projects;
+export default AllProjects;

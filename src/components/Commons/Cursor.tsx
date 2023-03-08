@@ -38,7 +38,7 @@ function Cursor() {
       variants={variants}
       animate={cursor}
       />
-      <div  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 transform !pointer-events-none  " style={{top:`${y}px`, left:`${x}px`}}>
+      <div  className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 transform !pointer-events-none  " style={{top:`${y}px`, left:`${x}px`}}>
         <BiCross/>
       </div>
      

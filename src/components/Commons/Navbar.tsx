@@ -38,7 +38,7 @@ const Navbar = (props: Props) => {
   };
 
   return (
-    <div className="relative h-[200px] w-[90%] z-50">
+    <div className="relative h-[200px] w-[90%] z-40">
       <nav
         onMouseOver={() => enter(false)}
         onMouseLeave={() => leave(true)}
@@ -61,12 +61,12 @@ const Navbar = (props: Props) => {
                 onMouseLeave={() => leave(false)}
               >
                 <Link
-                  href="/"
+                  href="/Projects"
                   className={`${
-                    currPath == "/" && "underline font-bold underline-offset-4"
+                    currPath == "/Projects" && "underline font-bold underline-offset-4"
                   }`}
                 >
-                  Works
+                  Projects
                 </Link>
               </motion.div>
               <motion.div
