@@ -12,7 +12,7 @@ import { Provider, useDispatch } from "react-redux";
 
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [isShown, setIsShown] = useState<boolean>(false);
+  const [isShown, setIsShown] = useState<boolean>(true);
   const router = useRouter();
   useEffect(() => {
     setTimeout(() => setIsShown(false), 2800);
