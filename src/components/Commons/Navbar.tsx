@@ -38,7 +38,7 @@ const Navbar = (props: Props) => {
   };
 
   return (
-    <div className="fixed h-[200px] top-16 w-[90%] z-40">
+    <div className="fixed  top-16 w-[90%] z-40">
       <nav
         onMouseOver={() => enter(false)}
         onMouseLeave={() => leave(true)}

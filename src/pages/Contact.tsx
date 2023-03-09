@@ -66,7 +66,11 @@ const Contact = (props: Props) => {
     }
   };
   return (
-    <AnimatePresence>
+    <motion.div
+    initial={{opacity:0, x:"-100%"}}
+    animate={{opacity:1, x:0}}
+    exit={{x:"100%"}}
+    transition={{ ease: "easeOut",duration: .5 }}>
             <title>Contact me</title>
 
       <GoBack/>
@@ -126,7 +130,7 @@ const Contact = (props: Props) => {
           </form>
         </motion.div>
       )}
-    </AnimatePresence>
+    </motion.div>
   );
 };
 

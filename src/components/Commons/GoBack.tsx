@@ -15,7 +15,7 @@ const GoBack = (props: Props) => {
 
 
   return (
-    <Link href="/" className="absolute top-12  left-16 font-bold flex items-center z-50  p-2"  onMouseEnter={textEnter}
+    <Link href="/" className="fixed -top-12  left-16 font-bold flex items-center !z-50  p-2"  onMouseEnter={textEnter}
     onMouseLeave={textLeave}><BsArrowUpLeft className="h-8 w-8 " /> <span className="ml-2">GO BACK</span></Link>
   )
 }
