@@ -47,6 +47,15 @@ const tailwind = {
   
   export const projects = [
     {
+      project: "Gamestats",
+      about:
+        "This project is an alternative to Linktree mainly for gamers. I used supabase for all the Backend and NextJS for the Frontend, I made this project alone and its still in development",
+      img: "/gamestats.png",
+      techno: [NextJs,Typescript, tailwind,Supabase],
+      source: "https://github.com/Blazrr/Gamestats",
+      link: "https://gamestats-snowy.vercel.app/",
+    },
+    {
       project: "Netflim",
       about:
         "Started this project to learn more about Backend with supabase, This project is still in Build but can be shown if requested",
