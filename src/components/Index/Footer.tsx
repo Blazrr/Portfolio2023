@@ -13,7 +13,7 @@ const Footer = (props: Props) => {
   const textLeave = () => dispatch(changeCursor("default"));
 
   return (
-    <div className="absolute bottom-[270px] flex justify-between items-center w-4/5 -translate-x-1/2 left-1/2 tranform font-semibold flex-wrap gap-5 mt-">
+    <div className=" flex justify-between items-center font-semibold flex-wrap gap-5 mt-16">
         <div className="flex justify-center items-center space-x-4">
         <Image src="/logo.png" height={50} width={50} className="rounded" alt="logo" />
       <div>

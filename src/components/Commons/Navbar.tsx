@@ -38,18 +38,18 @@ const Navbar = (props: Props) => {
   };
 
   return (
-    <div className="relative h-[200px] w-[90%] z-40">
+    <div className="fixed h-[200px] top-16 w-[90%] z-40">
       <nav
         onMouseOver={() => enter(false)}
         onMouseLeave={() => leave(true)}
-        className="absolute flex items-center justify-center top-12 right-0 md:-right-10 lg:-right-22 "
+        className="absolute flex items-center justify-center top-12 right-0 md:-right-10 lg:-right-22  "
       >
         <Squash toggled={isOpen} />
 
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              className="absolute right-0 p-24 flex space-x-4 md:space-x-6 lg:space-x-8 z-50 text-2xl font-semibold"
+              className="absolute right-0 p-24 flex space-x-4 md:space-x-6 lg:space-x-8 z-50 text-lg md:text-xl lg:text-2xl font-semibold"
               variants={boxVariants}
               initial="initial"
               animate="animate"

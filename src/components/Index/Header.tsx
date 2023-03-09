@@ -19,7 +19,7 @@ const Header = (props: Props) => {
     };
 
   return (
-    <div className="absolute bottom-[60%] md:bottom-[50%] left-12  flex justify-between w-4/5 flex-col lg:flex-row lg:items-center">
+    <div className=" mt-64  flex justify-between  flex-col lg:flex-row lg:items-center">
       <h1 className="text-4xl font-extrabold tracking-wide  md:text-5xl lg:text-6xl">
         Hello, I&apos;m Sami, <br /> a French Developer <br /> based in{" "}
         <span className="text-transparent  bg-clip-text bg-gradient-to-r from-blue-600 to-red-600">

@@ -11,15 +11,18 @@ import Footer from "@/components/Index/Footer";
 export default function Home() {
   const router = useRouter()
   useEffect(() => {
-    const goToProject = () => {
-      router.push("Projects")
+    const goToProject = (e:any) => {
+      if (e?.target?.body?.clientWidth > 500){
+        router.push("Projects")
+      }
+      console.log(e?.target?.body?.clientWidth)
     };
     document.addEventListener("scroll", goToProject, true);
 
     return () => document.removeEventListener("scroll", goToProject, true);
   }, [router]);
   return (
-    <motion.div className="h-screen relative"
+    <motion.div className=" relative w-4/5 mx-auto"
     initial={{x:"-100%", opacity: 0}}
     animate={{x:0 ,opacity: 1}}
     exit={{x:"100%",opacity: 0}}
@@ -30,8 +33,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className="absolute h-full w-full md:-bottom-16 -bottom-8 lg:-bottom-32 xl:-bottom-48  left-0">
       <Header />
       <Footer/>
+      <div className="mt-64 hidden lg:block">You found it !</div>
+      </div>
+
     </motion.div>
   );
 }
