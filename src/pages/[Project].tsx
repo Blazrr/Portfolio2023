@@ -16,7 +16,7 @@ const Project = (props: Props) => {
     exit={{x:"100%",opacity: 0}}
     transition={{ ease: "easeOut",duration: .5 }}
 
-    >[Prohjjject]</motion.div>
+    >Where are you going</motion.div>
   )
 }
 
