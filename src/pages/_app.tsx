@@ -12,6 +12,9 @@ import { useEffect, useState } from "react";
 import { Provider, useDispatch } from "react-redux";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css'
+import { Gradient } from '../Gradient'
+
+// Create your instance
 
 
 
@@ -22,8 +25,13 @@ export default function App({ Component, pageProps }: AppProps) {
     setTimeout(() => setIsShown(false), 2800);
   }, []);
 
+  const gradient:any = new Gradient()
+  gradient.initGradient('#gradient-canvas')
+
   return (
     <>
+    <canvas id="gradient-canvas" data-transition-in data-js-darken-top   />
+
     <Provider store={store} >
 
       <AnimatePresence>{isShown && <Intro />}</AnimatePresence>
