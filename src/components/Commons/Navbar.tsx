@@ -42,7 +42,7 @@ const Navbar = (props: Props) => {
       <nav
         onMouseOver={() => enter(false)}
         onMouseLeave={() => leave(true)}
-        className="absolute flex items-center justify-center top-12 right-0 md:-right-24 lg:-right-36 "
+        className="absolute flex items-center justify-center top-12 right-0 md:-right-10 lg:-right-22 "
       >
         <Squash toggled={isOpen} />
 

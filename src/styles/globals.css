@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-black text-white w-4/5 mx-auto;
+  @apply bg-black text-white mx-auto;
 }
 
 @layer base {

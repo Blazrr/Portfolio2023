@@ -84,7 +84,7 @@ const Contact = (props: Props) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="w-4/5 mx-auto flex justify-center bg-black rounded-xl p-6 "
+          className="w-4/5 mx-auto flex justify-center rounded-xl p-6 "
         >
           <form className="mt-8 space-y-8 w-4/5 max-w-[800px]" ref={form}>
             <h2 className="text-center text-4xl font-semibold underline">contact form</h2>

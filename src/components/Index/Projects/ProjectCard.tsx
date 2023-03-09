@@ -17,7 +17,7 @@ const ProjectCard = ({ project, setHoveredDiv }: Props) => {
 
   return (
     <>
-      <div className="flex bg-slate-300  rounded p-4 mt-8 relative  flex-col max-w-[600px]">
+      <div className="flex bg-slate-300  rounded p-4 mt-8 relative  flex-col max-w-[600px] w-[90%]">
         <a
           onMouseEnter={() => setHoveredDiv(true, project)}
           onMouseLeave={() => setHoveredDiv(false, project)}
