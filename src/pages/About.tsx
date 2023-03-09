@@ -9,6 +9,7 @@ type Props = {};
 const About = (props: Props) => {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      <title>About Sami</title>
       <GoBack/>
       <Description/>
     </motion.div>

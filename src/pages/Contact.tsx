@@ -67,6 +67,8 @@ const Contact = (props: Props) => {
   };
   return (
     <AnimatePresence>
+            <title>Contact me</title>
+
       <GoBack/>
       {loading ? (
         <motion.p

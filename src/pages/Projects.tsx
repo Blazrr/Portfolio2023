@@ -9,6 +9,7 @@ type Props = {};
 const Projects = (props: Props) => {
   return (
     <div>
+      <title>Sami&apos; Projects</title>
       <GoBack />
       <AllProjects />
     </div>
