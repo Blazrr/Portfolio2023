@@ -7,7 +7,7 @@ const Description = (props: Props) => {
   return (
     <AnimatePresence>
     <motion.div
-      className="w-4/5 mx-auto"
+      className="w-4/5 mx-auto mt-48"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

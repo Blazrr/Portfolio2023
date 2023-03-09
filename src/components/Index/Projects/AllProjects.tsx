@@ -22,7 +22,7 @@ const AllProjects = (props: Props) => {
   };
   return (
     <>
-      <div className="flex mt-32">
+      <div className="flex mt-44">
         <div className=" flex gap-8 items-center mx-auto flex-col justify-center " >
           {projects.map((project, id) => {
             return (

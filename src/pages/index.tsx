@@ -33,7 +33,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="absolute h-full w-full md:-bottom-16 -bottom-8 lg:-bottom-32 xl:-bottom-48  left-0">
+      <div className="absolute h-full w-full md:-bottom-16 -bottom-2 lg:-bottom-32 xl:-bottom-48  left-0">
       <Header />
       <Footer/>
       <div className="mt-64 hidden lg:block">You found it !</div>
