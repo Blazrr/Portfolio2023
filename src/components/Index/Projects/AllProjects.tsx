@@ -9,29 +9,19 @@ import { Parallax } from "@react-spring/parallax";
 type Props = {};
 
 const AllProjects = (props: Props) => {
-  const [isHovered, setIsHovered] = useState<boolean>(false);
 
-  const [currHovered, setCurrHovered] = useState<project>();
-  const showDiv = (isShown: boolean, project: project): void => {
-    if (isShown) {
-      setCurrHovered(project);
-      setIsHovered(true);
-    } else {
-      setIsHovered(false);
-    }
-  };
   return (
     <>
       <div className="flex mt-44">
-        <div className=" flex gap-8 items-center mx-auto flex-col justify-center " >
+        <div className=" flex gap-8 items-center mx-auto flex-wrap justify-center md:w-4/5 ">
           {projects.map((project, id) => {
             return (
-              <ProjectCard key={id} setHoveredDiv={showDiv} project={project} />
+              <ProjectCard key={id}  project={project} />
             );
           })}
         </div>
       </div>
-      {isHovered && <HoveredCard project={currHovered} />}
+     
     </>
   );
 };

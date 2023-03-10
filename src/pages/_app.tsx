@@ -19,7 +19,7 @@ import { Gradient } from '../Gradient'
 
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [isShown, setIsShown] = useState<boolean>(true);
+  const [isShown, setIsShown] = useState<boolean>(false);
   const router = useRouter();
   useEffect(() => {
     setTimeout(() => setIsShown(false), 2800);

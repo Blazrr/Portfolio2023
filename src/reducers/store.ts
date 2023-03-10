@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import cursorReducer from "./cursorSlice";
+import hoveredDivReducer from "./hoveredDiv";
 
 export const store = configureStore({
   reducer: {
     cursor: cursorReducer,
+    hoveredDiv: hoveredDivReducer
   },
 });
 

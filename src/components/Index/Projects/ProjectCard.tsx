@@ -1,35 +1,32 @@
 import { project } from "@/utils/typings";
 import Link from "next/link";
-import React from "react";
-import { ParallaxLayer } from "@react-spring/parallax";
+import React, { useState } from "react";
 import Image from "next/image";
 import { useDispatch } from "react-redux";
 import { changeCursor } from "@/reducers/cursorSlice";
+import { changeHovered } from "@/reducers/hoveredDiv";
 type Props = {
   project: project;
-  setHoveredDiv: (is: boolean, project: project) => void;
 };
 
-const ProjectCard = ({ project, setHoveredDiv }: Props) => {
+const ProjectCard = ({ project }: Props) => {
   const dispatch = useDispatch();
   const textEnter = () => dispatch(changeCursor("text"));
   const textLeave = () => dispatch(changeCursor("default"));
 
   return (
     <>
-      <div className="flex bg-slate-300  rounded p-4 mt-8 relative  flex-col max-w-[600px] w-[90%]">
-        <a
-          onMouseEnter={() => setHoveredDiv(true, project)}
-          onMouseLeave={() => setHoveredDiv(false, project)}
-          href={project.link}
-          target="_blank"
-        >
+      <div className="flex bg-slate-300 z-50 rounded p-4 mt-8 relative  flex-col max-w-[600px] w-[90%]">
+        <a href={project.link} target="_blank">
           <Image
             src={project.img}
             width={800}
             height={800}
             className="rounded"
             alt="qui va la"
+            onMouseEnter={() => dispatch(changeHovered(true))}
+            onMouseLeave={() => dispatch(changeHovered(false))}
+
           />
         </a>
         <h2 className="mt-4 font-bold text-xl underline ">{project.project}</h2>

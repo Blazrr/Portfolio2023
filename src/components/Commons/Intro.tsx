@@ -6,7 +6,7 @@ type Props = {}
 const Intro = (props: Props) => {
   return (
     <motion.div className='text-white h-full w-full absolute top-0 left-0 bg-black flex items-center justify-center'
-    initial={{opacity:0, y:"-100%"}}
+    initial={{opacity:0, y:0}}
     animate={{opacity:1, y:0}}
     exit={{y:"-100%"}}
     transition={{ ease: "easeOut",duration: .5 }}
