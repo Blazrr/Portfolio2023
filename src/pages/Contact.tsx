@@ -67,10 +67,11 @@ const Contact = (props: Props) => {
   };
   return (
     <motion.div
-    initial={{opacity:0, x:"-100%"}}
-    animate={{opacity:1, x:0}}
+    initial={{x:"-100%"}}
+    animate={{x:"0"}}
     exit={{x:"100%"}}
-    transition={{ ease: "easeOut",duration: .5 }}>
+    transition={{ease:"easeIn", duration:.6}}
+    >
             <title>Contact me</title>
 
       <GoBack/>
@@ -81,16 +82,13 @@ const Contact = (props: Props) => {
           exit={{ opacity: 0 }}
           className=""
         >
-          <h3 className="text-center text-5xl mt-32">
+          <h3 className="text-center text-5xl pt-32">
          Loading...
           </h3>
         </motion.p>
       ) : (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="w-4/5 mx-auto flex justify-center rounded-xl p-6 mt-32 "
+        <div
+          className="w-4/5 mx-auto flex justify-center rounded-xl p-6 pt-32 "
         >
           <form className="mt-8 space-y-8 w-4/5 max-w-[800px]" ref={form}>
             <h2 className="text-center text-4xl font-semibold underline">contact form</h2>
@@ -128,7 +126,7 @@ const Contact = (props: Props) => {
               Send
             </button>
           </form>
-        </motion.div>
+        </div>
       )}
     </motion.div>
   );

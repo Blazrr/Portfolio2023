@@ -38,8 +38,8 @@ const Navbar = (props: Props) => {
   };
 
   return (
-    <div className="fixed  top-16 w-[90%] z-40">
-      <nav
+    <nav className="fixed  top-16 w-[90%] z-40">
+      <div
         onMouseOver={() => enter(false)}
         onMouseLeave={() => leave(true)}
         className="absolute flex items-center justify-center top-12 right-0 md:-right-10 lg:-right-22  "
@@ -102,8 +102,8 @@ const Navbar = (props: Props) => {
             </motion.div>
           )}
         </AnimatePresence>
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
 };
 

@@ -23,7 +23,7 @@ const Footer = (props: Props) => {
 
         </div>
 
-      <div className="flex space-x-3 list-none text-gray-400 ">
+      <div className="flex space-x-3 list-none text-gray-700 ">
         <li>NextJS</li>
         <li>TailwindCSS</li>
         <li>Framer Motion</li>

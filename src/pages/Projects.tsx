@@ -14,19 +14,20 @@ const Projects = (props: Props) => {
   const isHovered  = useSelector((state: RootState) => state.hoveredDiv.value);
 
   return (
-    <>
+    <motion.div
+    initial={{x:"-100%"}}
+    animate={{x:"0"}}
+    exit={{x:"100%"}}
+    transition={{ease:"easeIn", duration:.6}}
+    >
             { isHovered && <HoveredCard   />}
 
-    <motion.div
-    initial={{opacity:0, x:"-100%"}}
-    animate={{opacity:1, x:0}}
-    exit={{x:"100%"}}
-    transition={{ ease: "easeOut",duration: .5 }}>
+    <div>
       <title>Sami&apos; Projects</title>
       <GoBack />
       <AllProjects />
+    </div>
     </motion.div>
-    </>
   );
 };
 

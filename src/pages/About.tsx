@@ -8,10 +8,12 @@ type Props = {};
 
 const About = (props: Props) => {
   return (
-    <motion.div initial={{opacity:0, x:"-100%"}}
-    animate={{opacity:1, x:0}}
+    <motion.div
+    initial={{x:"-100%"}}
+    animate={{x:"0"}}
     exit={{x:"100%"}}
-    transition={{ ease: "easeOut",duration: .5 }}>
+    transition={{ease:"easeIn", duration:.6}}
+    >
       <title>About Sami</title>
       <GoBack/>
       <Description/>
