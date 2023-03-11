@@ -13,7 +13,7 @@ const HoveredCard = ({  }: Props) => {
 
   return (
     <div
-      className=" top-1/2 left-1/2 fixed pointer-events-none z-40  -translate-x-1/2 -translate-y-1/2 transform "
+      className=" top-1/2 left-1/2 fixed pointer-events-none z-[9001]  -translate-x-1/2 -translate-y-1/2 transform "
       style={{ left: `${x}px`, top: `${y}px` }}
     >
       <GlitchedText

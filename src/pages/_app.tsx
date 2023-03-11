@@ -28,13 +28,13 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <canvas id="gradient-canvas" data-transition-in data-js-darken-top /> 
 
       <Provider store={store}>
         <AnimatePresence>{isShown && <Intro />}</AnimatePresence>
+        <canvas id="gradient-canvas" data-transition-in data-js-darken-top /> 
         {!isShown && (
           <>
-            <ToastContainer />
+          <ToastContainer />
             <Navbar />
             {/* <Blob /> */}
             <AnimatePresence mode="wait">
