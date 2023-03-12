@@ -18,7 +18,7 @@ import { createGlobalStyle } from 'styled-components'
 // Create your instance
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [isShown, setIsShown] = useState<boolean>(true);
+  const [isShown, setIsShown] = useState<boolean>(false);
   const router = useRouter();
   useEffect(() => {
     setTimeout(() => setIsShown(false), 2800);
@@ -27,7 +27,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
-    <ThemeProvider enableSystem={false} attribute="class"  >
+    <ThemeProvider enableSystem={true} attribute="class"  >
       <Provider store={store}>
         <MemoizedBackground/>
         <AnimatePresence>{isShown && <Intro />}</AnimatePresence>
