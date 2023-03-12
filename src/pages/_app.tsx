@@ -29,12 +29,12 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
     <ThemeProvider enableSystem={false} attribute="class"  >
       <Provider store={store}>
+        <MemoizedBackground/>
         <AnimatePresence>{isShown && <Intro />}</AnimatePresence>
         {!isShown && (
           <>
           <Darkmode/>
           <ToastContainer />
-          <MemoizedBackground/>
             <Navbar />
             <AnimatePresence mode="wait">
               <motion.div key={router.route}>
