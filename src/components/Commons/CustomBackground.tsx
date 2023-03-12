@@ -11,7 +11,7 @@ const CustomBackground = (props: Props) => {
     const {theme, setTheme} = useTheme()
     console.log(theme)
   return (
-    <canvas id="gradient-canvas" className={` ${theme === "light" ? "gradient-color"   : "dark:gradient-color-dark"} `} data-transition-in data-js-darken-top /> 
+    <canvas id="gradient-canvas" className= "gradient-color" data-transition-in data-js-darken-top /> 
 
   )
 }
