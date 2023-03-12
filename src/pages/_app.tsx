@@ -13,6 +13,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { ThemeProvider, useTheme } from 'next-themes'
 import  { MemoizedBackground } from "@/components/Commons/CustomBackground";
 import Darkmode from "@/components/Commons/Darkmode";
+import { createGlobalStyle } from 'styled-components'
+
 // Create your instance
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -21,10 +23,11 @@ export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     setTimeout(() => setIsShown(false), 2800);
   }, []);
+
+
   return (
     <>
     <ThemeProvider enableSystem={true} attribute="class">
-
       <Provider store={store}>
         <AnimatePresence>{isShown && <Intro />}</AnimatePresence>
         {!isShown && (

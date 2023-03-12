@@ -5,13 +5,12 @@ import React from 'react'
 type Props = {}
 
 const CustomBackground = (props: Props) => {
-
+  const { resolvedTheme } = useTheme()
     const gradient: any = new Gradient();
     gradient.initGradient("#gradient-canvas");
-    const {theme, setTheme} = useTheme()
-    console.log(theme)
+    console.log(resolvedTheme)
   return (
-    <canvas id="gradient-canvas" className= "gradient-color" data-transition-in data-js-darken-top /> 
+    <canvas id="gradient-canvas" className={`${resolvedTheme === "dark" ? "gradient-color" : "gradient-color-dark" }`} data-transition-in data-js-darken-top /> 
 
   )
 }
