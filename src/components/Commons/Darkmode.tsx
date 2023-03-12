@@ -14,11 +14,11 @@ const Darkmode = (props: Props) => {
         else setTheme("light")       
     }
   return (
-    <>
-    <h1>{theme}</h1>
-    <button className='fixed top-6 right-6 rounded p-2 border-2 border-black dark:border-white' onClick={changeTheme}>{resolvedTheme === "light" ? <FaMoon/> : <FaSun/>}
+
+
+    <button className='fixed top-6 right-6 rounded p-2 border-2 border-black dark:border-white z-[9001]' onClick={changeTheme}>{resolvedTheme === "light" ? <FaMoon/> : <FaSun/>}
     </button>
-    </>
+
   )
 }
 

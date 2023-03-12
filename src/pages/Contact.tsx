@@ -2,6 +2,7 @@ import GoBack from "@/components/Commons/GoBack";
 import { changeCursor } from "@/reducers/cursorSlice";
 import emailjs from "@emailjs/browser";
 import { AnimatePresence, motion } from "framer-motion";
+import Head from "next/head";
 import React, { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
@@ -72,7 +73,14 @@ const Contact = (props: Props) => {
     exit={{x:"100%"}}
     transition={{ease:"easeIn", duration:.6}}
     >
-            <title>Contact me</title>
+             <Head>
+        <title>Create Next App</title>
+        <meta name="description" content="Sami's Portfolio" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Contact Me</title>
+        <link rel="icon" href="/logo.png" />
+      </Head>
+
 
       <GoBack/>
       {loading ? (

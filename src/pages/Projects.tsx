@@ -7,6 +7,7 @@ import {motion} from "framer-motion"
 import HoveredCard from "@/components/Index/Projects/HoveredCard";
 import { useSelector } from "react-redux";
 import { RootState } from "@/reducers/store";
+import Head from "next/head";
 
 type Props = {};
 
@@ -16,6 +17,14 @@ const Projects = (props: Props) => {
   return (
     <>
     { isHovered && <HoveredCard   />}
+    <Head>
+        <title>Create Next App</title>
+        <meta name="description" content="Sami's Portfolio" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Sami&apos; Projects</title>
+        <link rel="icon" href="/logo.png" />
+      </Head>
+
    
     <motion.div
     initial={{x:"-100%"}}
