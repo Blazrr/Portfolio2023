@@ -1,8 +1,6 @@
-import Blob from "@/components/Commons/Blob";
 import Cursor from "@/components/Commons/Cursor";
 import Intro from "@/components/Commons/Intro";
 import Navbar from "@/components/Commons/Navbar";
-import Footer from "@/components/Index/Footer";
 import { store } from "@/reducers/store";
 import "@/styles/globals.css";
 import { AnimatePresence, motion } from "framer-motion";
@@ -12,31 +10,27 @@ import { useEffect, useState } from "react";
 import { Provider, useDispatch } from "react-redux";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Gradient } from "../Gradient";
-
+import { ThemeProvider, useTheme } from 'next-themes'
+import  { MemoizedBackground } from "@/components/Commons/CustomBackground";
 // Create your instance
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [isShown, setIsShown] = useState<boolean>(true);
+  const [isShown, setIsShown] = useState<boolean>(false);
   const router = useRouter();
   useEffect(() => {
     setTimeout(() => setIsShown(false), 2800);
   }, []);
-
-  const gradient: any = new Gradient();
-  gradient.initGradient("#gradient-canvas");
-
   return (
     <>
+    <ThemeProvider enableSystem={true} attribute="class">
 
       <Provider store={store}>
         <AnimatePresence>{isShown && <Intro />}</AnimatePresence>
-        <canvas id="gradient-canvas" data-transition-in data-js-darken-top /> 
         {!isShown && (
           <>
           <ToastContainer />
+          <MemoizedBackground/>
             <Navbar />
-            {/* <Blob /> */}
             <AnimatePresence mode="wait">
               <motion.div key={router.route}>
                 <Component {...pageProps} />
@@ -46,6 +40,7 @@ export default function App({ Component, pageProps }: AppProps) {
         )}
         <Cursor />
       </Provider>
+      </ThemeProvider>
     </>
   );
 }

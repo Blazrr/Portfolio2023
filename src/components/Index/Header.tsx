@@ -4,6 +4,8 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { changeCursor } from "@/reducers/cursorSlice";
 import { useRouter } from "next/router";
+import AnimatedTextWord from "../Commons/AnimatedTextWord";
+import { useTheme } from "next-themes";
 
 type Props = {};
 
@@ -13,14 +15,16 @@ const Header = (props: Props) => {
   const textEnter = () => dispatch(changeCursor("text"))
   const textLeave = () => dispatch(changeCursor("default"))
   const router = useRouter()
+  const {theme, setTheme} = useTheme()
 
     const goToProject = () => {
       router.push("Projects")
     };
+    console.log(theme)
 
   return (
     <div className=" mt-64  flex justify-between  flex-col lg:flex-row lg:items-center">
-      <h1 className="text-4xl font-extrabold tracking-wide  md:text-5xl lg:text-6xl">
+      <h1 className="text-4xl font-extrabold tracking-wide  md:text-5xl lg:text-6xl ">
         Hello, I&apos;m Sami, <br /> a French Developer <br /> based in{" "}
         <span className="text-transparent  bg-clip-text bg-gradient-to-r from-blue-600 to-red-600">
           France
