@@ -12,10 +12,11 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ThemeProvider, useTheme } from 'next-themes'
 import  { MemoizedBackground } from "@/components/Commons/CustomBackground";
+import Darkmode from "@/components/Commons/Darkmode";
 // Create your instance
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [isShown, setIsShown] = useState<boolean>(false);
+  const [isShown, setIsShown] = useState<boolean>(true);
   const router = useRouter();
   useEffect(() => {
     setTimeout(() => setIsShown(false), 2800);
@@ -28,6 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <AnimatePresence>{isShown && <Intro />}</AnimatePresence>
         {!isShown && (
           <>
+          <Darkmode/>
           <ToastContainer />
           <MemoizedBackground/>
             <Navbar />

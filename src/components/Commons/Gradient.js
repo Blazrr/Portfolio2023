@@ -99,7 +99,7 @@ function normalizeColor(hexCode) {
                     getDeclaration(name, type, length) {
                         const uniform = this;
                         if (uniform.excludeFrom !== type) {
-                            if ("array" === uniform.type) return uniform.value[0].getDeclaration(name, type, uniform.value.length) + `\nconst int ${name}_length = ${uniform.value.length};`;
+                            if ("array" === uniform.type) return uniform.value[0]?.getDeclaration(name, type, uniform.value.length) + `\nconst int ${name}_length = ${uniform.value.length};`;
                             if ("struct" === uniform.type) {
                                 let name_no_prefix = name.replace("u_", "");
                                 return name_no_prefix = 

@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-black text-white mx-auto;
+  @apply bg-black text-black mx-auto dark:text-white transition-all duration-200;
 }
 
 @layer base {
@@ -28,10 +28,21 @@ body {
     height:100% ;
     position: fixed;
     z-index: -10;
-    --gradient-color-1: #D1D5D8; 
-    --gradient-color-2: #3498DB; 
-    --gradient-color-3: #E74C3C;  
-    --gradient-color-4: #F1C40F;
+
+  }
+  .gradient-color{
+    --gradient-color-1: #c3e4ff; 
+    --gradient-color-2: #6ec3f4; 
+    --gradient-color-3: #eae2ff;  
+    --gradient-color-4: #b9beff;
+  }
+  .gradient-color-dark{
+
+    --gradient-color-1: #043D5D; 
+    --gradient-color-2: #032E46; 
+    --gradient-color-3: #23B684;  
+    --gradient-color-4: #0F595E;
+
   }
       
 
