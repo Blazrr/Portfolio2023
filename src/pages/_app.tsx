@@ -14,6 +14,7 @@ import { ThemeProvider, useTheme } from 'next-themes'
 import  { MemoizedBackground } from "@/components/Commons/CustomBackground";
 import Darkmode from "@/components/Commons/Darkmode";
 import { createGlobalStyle } from 'styled-components'
+import Head from "next/head";
 
 // Create your instance
 
@@ -27,6 +28,13 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
+       <Head>
+        <title>Create Next App</title>
+        <meta name="description" content="Sami's Portfolio" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Sami&apos; Portfolio</title>
+        <link rel="icon" href="/logo.png" />
+      </Head>
     <ThemeProvider enableSystem={true} attribute="class"  >
       <Provider store={store}>
         <MemoizedBackground/>
