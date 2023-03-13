@@ -43,7 +43,7 @@ export default function Home() {
     
       </motion.div>
 
-      <p className="absolute top-[3000px] text-4xl left-0 text-transparent">
+      <p className="absolute top-[3000px] hidden md:block text-4xl left-0 text-transparent">
         You found it
       </p>
     </>
