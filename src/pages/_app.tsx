@@ -15,11 +15,12 @@ import  { MemoizedBackground } from "@/components/Commons/CustomBackground";
 import Darkmode from "@/components/Commons/Darkmode";
 import { createGlobalStyle } from 'styled-components'
 import Head from "next/head";
-
+import Translate from "@/components/Translate";
+import { appWithTranslation } from "next-i18next";
 // Create your instance
 
-export default function App({ Component, pageProps }: AppProps) {
-  const [isShown, setIsShown] = useState<boolean>(true);
+ function App({ Component, pageProps }: AppProps) {
+  const [isShown, setIsShown] = useState<boolean>(false);
   const router = useRouter();
   useEffect(() => {
     setTimeout(() => setIsShown(false), 2800);
@@ -41,7 +42,8 @@ export default function App({ Component, pageProps }: AppProps) {
         <AnimatePresence>{isShown && <Intro />}</AnimatePresence>
         {!isShown && (
           <>
-          <Darkmode/>
+          <Translate/>
+        <Darkmode/>
           <ToastContainer />
             <Navbar />
             <AnimatePresence mode="wait">
@@ -57,3 +59,5 @@ export default function App({ Component, pageProps }: AppProps) {
     </>
   );
 }
+
+export default appWithTranslation(App)

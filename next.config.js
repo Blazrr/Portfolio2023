@@ -14,4 +14,10 @@ module.exports = {
       "play-lh.googleusercontent.com"
     ],
   },
+  i18n: {
+
+    locales: ["fr","en"],
+
+    defaultLocale: 'en',
+  }
 };
