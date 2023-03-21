@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,6 +10,9 @@ body {
 }
 
 @layer base {
+  html {
+    font-family: "Montserrat";
+  }
   html .glitched {
     font-family: "Space Mono";
   }
@@ -28,14 +32,15 @@ body {
     height:100% ;
     position: fixed;
     z-index: -10;
+    transition: all ease-in-out 1s;
   }
 
 
   .gradient-light{
-    --gradient-color-1: #4A4E4D; 
-    --gradient-color-2: #0E9AA7; 
-    --gradient-color-3: #F6CD61;  
-    --gradient-color-4: #3DA4AB;
+    --gradient-color-1: #043D5D; 
+    --gradient-color-2: #032E46; 
+    --gradient-color-3: #23B684;  
+    --gradient-color-4: #0F595E;
   }
 
   .gradient-dark{
