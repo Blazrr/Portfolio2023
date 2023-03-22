@@ -16,7 +16,7 @@ const ProjectCard = ({ project }: Props) => {
 
   return (
     <>
-      <div className="flex bg-slate-300 z-50 rounded p-4 mt-8 relative  flex-col max-w-[600px] ">
+      <div className="flex bg-slate-200 dark:bg-black z-50 rounded p-4 mt-8 relative  flex-col max-w-[600px] ">
         <a href={project.link} target="_blank">
           <Image
             src={project.img}
