@@ -43,13 +43,13 @@ const Description = (props: Props) => {
           <h4 className="font-bold ">Languages</h4>
           <hr  />
 
-          <p className="ml-4 ">Python, Javascript, Typescript</p>
+          <p className="ml-4 ">Python, Javascript, Typescript, C</p>
         </div>
         <div className="flex mt-4">
           <h4 className="font-bold">Frameworks and Libraries</h4>
           <hr  />
 
-          <p className="ml-4">React, NextJS, NodeJS</p>
+          <p className="ml-4">React, NextJS, NodeJS, Supabase</p>
         </div>
         <div className="flex mt-4">
           <h4 className="font-bold">Styling and Components</h4>
@@ -68,6 +68,10 @@ const Description = (props: Props) => {
       <div className="mt-8 mx-auto flex justify-center flex-col max-w-xl">
         <h3 className=" decoration-2">Education</h3>
         <hr  />
+        <div className="flex mt-6">
+          <h4 className="font-bold ">2023-2024</h4>
+          <p className="ml-4">Software Development at O&apos;Clock</p>
+        </div>
         <div className="flex mt-6">
           <h4 className="font-bold ">2023</h4>
           <p className="ml-4">ReactJS Bootcamp at GRETA92 in Boulogne</p>
@@ -91,7 +95,7 @@ const Description = (props: Props) => {
         <h3 className="decoration-2">Socials</h3>
         <hr  />
         <a
-          href="https://www.linkedin.com/in/sami-el-mhamedi-8284621b4/"
+          href="https://www.linkedin.com/in/samielm/"
           className="mt-6 flex items-center space-x-2"
         >
           <FaLinkedin /> <p>My linkedin</p> <FaExternalLinkAlt />
