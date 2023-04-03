@@ -6,6 +6,7 @@ import { changeCursor } from "@/reducers/cursorSlice";
 import { useRouter } from "next/router";
 import AnimatedTextWord from "../Commons/AnimatedTextWord";
 import { useTheme } from "next-themes";
+import {MdWork} from "react-icons/md"
 
 type Props = {};
 
@@ -29,6 +30,8 @@ const Header = (props: Props) => {
         <span className="text-transparent  bg-clip-text bg-gradient-to-r from-blue-600 to-red-600">
           France
         </span>
+        <br />
+        <div className="text-xl break-normal flex items-center space-x-4 mt-4"> <MdWork/><p>Looking for an apprenticeship</p>  </div>
       </h1>
 
       <div className="flex lg:items-center flex-col space-y-8">
