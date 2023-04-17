@@ -24,9 +24,9 @@ export default function Home() {
   return (
     <>
     <motion.div className="fixed h-full w-4/5 -translate-x-1/2 left-1/2  md:-bottom-16 bottom-4 lg:-bottom-32 xl:-bottom-48  transform"
-         initial={{x:"-150%"}}
+         initial={{x:"75%"}}
          animate={{x:"-50%"}}
-         exit={{x:"100%"}}
+         exit={{x:"-100%"}}
          transition={{ease:"easeIn", duration:.6}}
     >
       <Head>

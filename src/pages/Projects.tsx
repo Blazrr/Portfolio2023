@@ -27,9 +27,9 @@ const Projects = (props: Props) => {
 
    
     <motion.div
-    initial={{x:"-100%"}}
+    initial={{x:"100%"}}
     animate={{x:"0"}}
-    exit={{x:"100%"}}
+    exit={{x:"-100%"}}
     transition={{ease:"easeIn", duration:.6}}
     >
 
